@@ -36,16 +36,11 @@ using namespace std;
 #include <iostream>
 
 string current_time() {
-    // time_t givemetime = time(NULL);
-    // string s = ctime(&givemetime);
-    // return s;
     struct timeval time_now {};
     gettimeofday(&time_now, nullptr);
     time_t msecs_time = (time_now.tv_sec * 1000) + (time_now.tv_usec / 1000);
 
     return to_string(msecs_time);
-    // cout << "seconds since epoch: " << time_now.tv_sec << endl;
-    // cout << "milliseconds since epoch: " << msecs_time << endl << endl;
 }
 
 int main(int argc, char ** argv){
@@ -68,14 +63,6 @@ int main(int argc, char ** argv){
     cache.open(cache_file_name, ios::out);
     cache << "0 0" << '\n';
 
-    // fstream ofs2;
-    // ofs2.open(latency_file_name, std::ofstream::out | std::ofstream::trunc);
-    // ofs2.close();
-    //the above segment of code clears the content inside the file
-
-    // fstream latency;
-    // latency.open(latency_file_name, ios::out);
-    // latency << "0" << '\n';
     
 
     int listenfd, clilen, connfd, childpid, n1;
@@ -110,8 +97,7 @@ int main(int argc, char ** argv){
                 close(listenfd);
                 bzero(&msg1, 256);
                 n1 = read(connfd, msg1, 256);
-                // cout<<"request received to send: ";
-                // printf("%s\n", msg1);
+
 
                 // ****************************************************************************
                 //communicating with main server
@@ -123,10 +109,6 @@ int main(int argc, char ** argv){
                     break;
                 }
                 int value = stoi(s);
-                // cout << "integer: " << x << '\n';
-
-
-
 
                 auto present_in_file = [&] (int value) {
                     //also updates the timestamp in case it's a hit
@@ -136,14 +118,12 @@ int main(int argc, char ** argv){
                     bool ok = 0;
                     while (!cache.eof()) {
                         getline(cache, s);
-                        // cout << s << ' ' << (int)s.size() << '\n';
                         if (s.empty()) break;
                         int i = 0;
                         while (i < (int)s.size() && s[i] != ' ') i++;
                         s = s.substr(0, i);
                         if (s.empty()) break;
                         int x = stoi(s);
-                        // cout << "x: " << x << '\n';
                         if (x == value) {
                             ok = 1;
                             break;
@@ -188,7 +168,6 @@ int main(int argc, char ** argv){
                 };
 
                 int found = present_in_file(value);
-                // int found = 0;
                 if (!found) {
 
                     auto evict = [&] () {
@@ -338,11 +317,8 @@ int main(int argc, char ** argv){
                     fputs(recvline_1, stdout);
                     cout << '\n';
                     // string server_data(recvline_1);
-                    // server_data.pop_back();
                     bzero(&msg1, sizeof(msg1));
-                    // for(int i=0;i<server_data.length();i++){
-                    //     msg1[i]=server_data[i];
-                    // }
+
                     string s = recvline_1;
                     int i = 0;
                     while (i < (int)s.size() && s[i] != ' ') i++;
@@ -377,9 +353,7 @@ int main(int argc, char ** argv){
                     char buffer[256] = "hit";
                     bzero(&msg1, 256);
                     strcpy(msg1, buffer);
-                    // string s = buffer;
-                    // if (s.empty()) s = "0";
-                    // int value = stoi(s);
+
                     cout << "HIT! Found data requested by client!: " << '\n';
                 }
 
