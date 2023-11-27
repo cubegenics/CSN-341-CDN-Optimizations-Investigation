@@ -1,0 +1,83 @@
+Routing Table Info for 0
+Dest- 0	NextHop- 0 ip interface of current router-  ip interface of next hop router- 
+Dest- 1	NextHop- 1 ip interface of current router- 127.0.0.9 ip interface of next hop router- 127.0.0.3
+Dest- 3	NextHop- 1 ip interface of current router- 127.0.0.9 ip interface of next hop router- 127.0.0.3
+Dest- 4	NextHop- 4 ip interface of current router- 127.0.0.8 ip interface of next hop router- 127.0.0.7
+
+Routing Table Info for 1
+Dest- 0	NextHop- 0 ip interface of current router- 127.0.0.3 ip interface of next hop router- 127.0.0.9
+Dest- 1	NextHop- 1 ip interface of current router-  ip interface of next hop router- 
+Dest- 3	NextHop- 3 ip interface of current router- 127.0.0.2 ip interface of next hop router- 127.0.0.4
+Dest- 4	NextHop- 0 ip interface of current router- 127.0.0.3 ip interface of next hop router- 127.0.0.9
+
+Routing Table Info for 2
+Dest- 2	NextHop- 2 ip interface of current router-  ip interface of next hop router- 
+Dest- 5	NextHop- 5 ip interface of current router- 127.0.1.12 ip interface of next hop router- 127.0.1.2
+Dest- 6	NextHop- 6 ip interface of current router- 127.0.1.11 ip interface of next hop router- 127.0.0.10
+Dest- 7	NextHop- 5 ip interface of current router- 127.0.1.12 ip interface of next hop router- 127.0.1.2
+Dest- 8	NextHop- 5 ip interface of current router- 127.0.1.12 ip interface of next hop router- 127.0.1.2
+
+Routing Table Info for 3
+Dest- 0	NextHop- 1 ip interface of current router- 127.0.0.4 ip interface of next hop router- 127.0.0.2
+Dest- 1	NextHop- 1 ip interface of current router- 127.0.0.4 ip interface of next hop router- 127.0.0.2
+Dest- 3	NextHop- 3 ip interface of current router-  ip interface of next hop router- 
+Dest- 4	NextHop- 4 ip interface of current router- 127.0.0.5 ip interface of next hop router- 127.0.0.6
+
+Routing Table Info for 4
+Dest- 0	NextHop- 0 ip interface of current router- 127.0.0.7 ip interface of next hop router- 127.0.0.8
+Dest- 1	NextHop- 0 ip interface of current router- 127.0.0.7 ip interface of next hop router- 127.0.0.8
+Dest- 3	NextHop- 3 ip interface of current router- 127.0.0.6 ip interface of next hop router- 127.0.0.5
+Dest- 4	NextHop- 4 ip interface of current router-  ip interface of next hop router- 
+
+Routing Table Info for 5
+Dest- 2	NextHop- 2 ip interface of current router- 127.0.1.2 ip interface of next hop router- 127.0.1.12
+Dest- 5	NextHop- 5 ip interface of current router-  ip interface of next hop router- 
+Dest- 6	NextHop- 2 ip interface of current router- 127.0.1.2 ip interface of next hop router- 127.0.1.12
+Dest- 7	NextHop- 7 ip interface of current router- 127.0.1.3 ip interface of next hop router- 127.0.1.4
+Dest- 8	NextHop- 7 ip interface of current router- 127.0.1.3 ip interface of next hop router- 127.0.1.4
+
+Routing Table Info for 6
+Dest- 2	NextHop- 2 ip interface of current router- 127.0.1.10 ip interface of next hop router- 127.0.1.11
+Dest- 5	NextHop- 2 ip interface of current router- 127.0.1.10 ip interface of next hop router- 127.0.1.11
+Dest- 6	NextHop- 6 ip interface of current router-  ip interface of next hop router- 
+Dest- 7	NextHop- 7 ip interface of current router- 127.0.1.8 ip interface of next hop router- 127.0.1.6
+Dest- 8	NextHop- 7 ip interface of current router- 127.0.1.8 ip interface of next hop router- 127.0.1.6
+
+Routing Table Info for 7
+Dest- 2	NextHop- 5 ip interface of current router- 127.0.1.4 ip interface of next hop router- 127.0.1.3
+Dest- 5	NextHop- 5 ip interface of current router- 127.0.1.4 ip interface of next hop router- 127.0.1.3
+Dest- 6	NextHop- 6 ip interface of current router- 127.0.1.6 ip interface of next hop router- 127.0.1.8
+Dest- 7	NextHop- 7 ip interface of current router-  ip interface of next hop router- 
+Dest- 8	NextHop- 8 ip interface of current router- 127.0.1.5 ip interface of next hop router- 127.0.1.7
+
+Routing Table Info for 8
+Dest- 2	NextHop- 7 ip interface of current router- 127.0.1.7 ip interface of next hop router- 127.0.1.5
+Dest- 5	NextHop- 7 ip interface of current router- 127.0.1.7 ip interface of next hop router- 127.0.1.5
+Dest- 6	NextHop- 7 ip interface of current router- 127.0.1.7 ip interface of next hop router- 127.0.1.5
+Dest- 7	NextHop- 7 ip interface of current router- 127.0.1.7 ip interface of next hop router- 127.0.1.5
+Dest- 8	NextHop- 8 ip interface of current router-  ip interface of next hop router- 
+
+Routing Table Info for 9
+Dest- 9	NextHop- 9 ip interface of current router-  ip interface of next hop router- 
+Dest- 10	NextHop- 10 ip interface of current router- 127.0.2.4 ip interface of next hop router- 127.0.2.3
+Dest- 11	NextHop- 10 ip interface of current router- 127.0.2.4 ip interface of next hop router- 127.0.2.3
+
+Routing Table Info for 10
+Dest- 9	NextHop- 9 ip interface of current router- 127.0.2.3 ip interface of next hop router- 127.0.2.4
+Dest- 10	NextHop- 10 ip interface of current router-  ip interface of next hop router- 
+Dest- 11	NextHop- 11 ip interface of current router- 127.0.2.6 ip interface of next hop router- 127.0.2.7
+
+Routing Table Info for 11
+Dest- 9	NextHop- 10 ip interface of current router- 127.0.2.7 ip interface of next hop router- 127.0.2.6
+Dest- 10	NextHop- 10 ip interface of current router- 127.0.2.7 ip interface of next hop router- 127.0.2.6
+Dest- 11	NextHop- 11 ip interface of current router-  ip interface of next hop router- 
+
+Routing Table Info for 12
+Dest- 12	NextHop- 12 ip interface of current router-  ip interface of next hop router- 
+
+Routing Table Info for 13
+Dest- 13	NextHop- 13 ip interface of current router-  ip interface of next hop router- 
+
+Routing Table Info for 14
+Dest- 14	NextHop- 14 ip interface of current router-  ip interface of next hop router- 
+

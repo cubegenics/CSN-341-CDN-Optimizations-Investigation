@@ -1,0 +1,54 @@
+Asst next hop Info for 0
+Dest asn- 2	NextHop- {edge router,direct interface} : {1 - 127.0.0.1, 10 - 127.0.2.1}
+Dest asn- 3	NextHop- {edge router,direct interface} : {3 - 127.0.0.10, 12 - 127.0.3.1}
+
+Asst next hop Info for 1
+Dest asn- 2	NextHop- {edge router,direct interface} : {1 - 127.0.0.1, 10 - 127.0.2.1}
+Dest asn- 3	NextHop- {edge router,direct interface} : {3 - 127.0.0.10, 12 - 127.0.3.1}
+
+Asst next hop Info for 2
+Dest asn- 2	NextHop- {edge router,direct interface} : {5 - 127.0.1.1, 10 - 127.0.2.2}
+
+Asst next hop Info for 3
+Dest asn- 2	NextHop- {edge router,direct interface} : {1 - 127.0.0.1, 10 - 127.0.2.1}
+Dest asn- 3	NextHop- {edge router,direct interface} : {3 - 127.0.0.10, 12 - 127.0.3.1}
+
+Asst next hop Info for 4
+Dest asn- 2	NextHop- {edge router,direct interface} : {1 - 127.0.0.1, 10 - 127.0.2.1}
+Dest asn- 3	NextHop- {edge router,direct interface} : {3 - 127.0.0.10, 12 - 127.0.3.1}
+
+Asst next hop Info for 5
+Dest asn- 2	NextHop- {edge router,direct interface} : {5 - 127.0.1.1, 10 - 127.0.2.2}
+
+Asst next hop Info for 6
+Dest asn- 2	NextHop- {edge router,direct interface} : {6 - 127.0.1.9, 9 - 127.0.2.5}
+
+Asst next hop Info for 7
+Dest asn- 2	NextHop- {edge router,direct interface} : {5 - 127.0.1.1, 10 - 127.0.2.2}
+
+Asst next hop Info for 8
+Dest asn- 2	NextHop- {edge router,direct interface} : {5 - 127.0.1.1, 10 - 127.0.2.2}
+
+Asst next hop Info for 9
+Dest asn- 0	NextHop- {edge router,direct interface} : {10 - 127.0.2.1, 1 - 127.0.0.1}
+Dest asn- 1	NextHop- {edge router,direct interface} : {9 - 127.0.2.5, 6 - 127.0.1.9}
+
+Asst next hop Info for 10
+Dest asn- 0	NextHop- {edge router,direct interface} : {10 - 127.0.2.1, 1 - 127.0.0.1}
+Dest asn- 1	NextHop- {edge router,direct interface} : {10 - 127.0.2.2, 5 - 127.0.1.1}
+
+Asst next hop Info for 11
+Dest asn- 0	NextHop- {edge router,direct interface} : {10 - 127.0.2.1, 1 - 127.0.0.1}
+Dest asn- 1	NextHop- {edge router,direct interface} : {10 - 127.0.2.2, 5 - 127.0.1.1}
+
+Asst next hop Info for 12
+Dest asn- 0	NextHop- {edge router,direct interface} : {12 - 127.0.3.1, 3 - 127.0.0.10}
+Dest asn- 4	NextHop- {edge router,direct interface} : {12 - 127.0.3.2, 13 - 127.0.4.1}
+
+Asst next hop Info for 13
+Dest asn- 3	NextHop- {edge router,direct interface} : {13 - 127.0.4.1, 12 - 127.0.3.2}
+Dest asn- 5	NextHop- {edge router,direct interface} : {13 - 127.0.4.2, 14 - 127.0.5.1}
+
+Asst next hop Info for 14
+Dest asn- 4	NextHop- {edge router,direct interface} : {14 - 127.0.5.1, 13 - 127.0.4.2}
+
