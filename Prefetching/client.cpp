@@ -21,62 +21,11 @@ static std::random_device rd;
 static std::mt19937 gen(rd());
 using namespace std;
 
-/*
-data values pairs on which to observe:
-NUM_OF_REQ, MAX_DATA_VALUE, CACHE_SIZE
-100, 1000, 10
-500, 1000, 30
-500, 10000, 30
-*/
 
 #define server_port 8080
 #define NUM_OF_REQ 500
 #define MAX_DATA_VALUE 10000
 
-void update_results() {
-    /*
-    a message from an edge server to the client would have the following pieces of information:
-    i) data requested
-    ii) whether the edge server got that data from its cache or the main server -> can be used to measure the overall latency in content delivery and hit rates for the cache
-    we need a factor to estimate how much time we saved from prefetching, rather than fetching data again and again from the main server
-    so, we need to analyze the client requests in the form of clusters of related data.
-    say, the data has 5 packets
-    without prefetching, we'd need to fetch the data 5 times from the main server
-    with prefetching, we'd need to fetch the data less than 5 times from the main server, adding
-    to time saved from RTT's between the edge server and the main server
-
-    
-    iii) to analyze the load on the main server,
-    what we could do is save the timestamps of the requests served 
-    any set of requests served within a given duration of time would 
-    be assumed to be requested from the main server at the same time
-    so, we could plot the number of requests fulfilled by the edge
-    server in that duration and plot the graph for the load on the
-    main server
->
-    iv) also want to analyze the link congestion on the links from the edge server to the main server
-    to accomplish this, we could create files specific to edge servers that we've serviced according to their IP's
-    in these edge server specific files, we'd have information about the timestamps of their requests to the main server
-    we'd then cluster these requests into groups of a certain size (with respect to difference in timestamp at which they were served)
-    for e.x. group requests served within 200ms of each other
-    with this, we'd say that the more the requests served in a group, the worse the link congestion on the link from the main server to that edge server
-
-    v) RTT Delay would be measured per edge server on the basis of how many times it needed to request data from the main server
-    it'd have a timestamp for when it requested the data and one for when it received it
-    the difference between these times would be the time required to retreive the data from the main server
-    then, for the final evaluation, you could just add all the RTT's for each edge server and display the per-edge server delay
-    in files specific to each of the edge servers
-
-
-    aspects whose analysis is complete:
-    - Cache Hits (displayed in the client)
-    - Server Load (run manually after running the requests from all clients: server_load.cpp)
-    - RTT (in latency files: l1.txt, l2.txt, l3.txt)
-
-    remaining: Link Congestion
->
-    */
-}
 
 string current_time() {
     // time_t givemetime = time(NULL);
@@ -121,23 +70,6 @@ vector<int> generate_trace(int lambda, int threshold) {
             }
         }
     }
-    // for (int i = 0; i < (NUM_OF_REQ + 2)/ 3; i++) {
-    //     int v1 = rand() % MAX_DATA_VALUE + 1;
-    //     int v2, v3;
-    //     if (v1 % 3 == 0) {
-    //         v2 = v1 + 1;
-    //         v3 = v1 + 2;
-    //     } else if (v1 % 3 == 1) {
-    //         v2 = v1 - 1;
-    //         v3 = v1 + 1;
-    //     } else {
-    //         v2 = v1 - 1;
-    //         v3 = v1 - 2;
-    //     }
-    //     values.push_back(v1);
-    //     values.push_back(v2);
-    //     values.push_back(v3);
-    // }
     while ((int)values.size() > NUM_OF_REQ) values.pop_back();
     return values;
 }
@@ -202,27 +134,13 @@ int main(int argc, char ** argv){
     }
 
 
-    //performance
-
     int hits = 0;
 
-    //performance end..
-
-
-    // automate input..
-
-    // vector<int> values = generate_trace(5, 6);
     vector<int> values = generate_trace_updated(3);
-    // vector<int> values;
-    // for (int i = 0; i < NUM_OF_REQ; i++) {
-    //     values.push_back(rand() % MAX_DATA_VALUE + 1);
-    // }
+
     
 
-    //automate input end..
-
     long long client_latency = 0;
-    // for (;;) {
     for (auto &value: values) {
 
         bzero(&sendline, 256);
@@ -238,8 +156,7 @@ int main(int argc, char ** argv){
 
         integer_to_buffer(value);
 
-        // cout << "Enter message: ";
-        // fgets(sendline, 256, stdin);
+
         n = strlen(sendline);
 
         write(sockfd, sendline, n);
@@ -274,9 +191,6 @@ int main(int argc, char ** argv){
             return dif;
         };
 
-        // fstream file;
-        // file.open("client_latency.txt", ios::out);
-        // file << difference(request_timestamp, receive_timestamp) << '\n';
         client_latency += difference(request_timestamp, receive_timestamp);
 
     }
